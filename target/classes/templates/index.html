@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="/imgs/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <title>LifeBank</title>
+</head>
+
+<body>
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo">
+            <i class="ri-heart-pulse-line nav__logo-icon"></i>
+            <p class="logo__text">Life<span class="red__word">Bank</span></p>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link active-link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#products" class="nav__link">Products</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#faqs" class="nav__link">FAQs</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact Us</a>
+                </li>
+            </ul>
+
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <div class="nav__btns">
+            <!-- Theme change button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home" id="home">
+        <div class="home__container container grid">
+            <img src="/imgs/db.png" alt="" class="home__img">
+
+            <div class="home__data">
+                <h1 class="home__title">
+                    Donate blood, save a life - <br> be a hero today!
+                </h1>
+                <p class="home__description">
+                    Join us in the fight against blood shortages and make a life-saving difference today. Your donation could be the difference.
+                </p>
+                <a th:href="@{/login}" class="button button--flex">
+                    Get Started <i class="ri-arrow-right-up-line button__icon"></i>
+                </a>
+            </div>
+
+            <div class="home__social">
+                <span class="home__social-follow">Follow Us</span>
+
+                <div class="home__social-links">
+                    <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== ABOUT ====================-->
+    <section class="about section container" id="about">
+        <div class="about__container grid">
+            <img src="/imgs/" alt="" class="about__img">
+
+            <div class="about__data">
+                <h2 class="section__title about__title">
+                    Who we really are & <br> why donate blood
+                </h2>
+
+                <p class="about__description">
+                    As a blood donation non-profit organization, our mission
+                    is to ensure a safe and adequate supply of blood for those in
+                    need.
+                </p>
+
+                <div class="about__details">
+                    <p class="about__details-description">
+                        <i class="ri-checkbox-fill about__details-icon"></i>
+                        Blood donation saves lives.
+                    </p>
+                    <p class="about__details-description">
+                        <i class="ri-checkbox-fill about__details-icon"></i>
+                        Blood transfusions treat many medical conditions.
+                    </p>
+                    <p class="about__details-description">
+                        <i class="ri-checkbox-fill about__details-icon"></i>
+                        Donating blood is safe, easy, and quick.
+                    </p>
+                    <p class="about__details-description">
+                        <i class="ri-checkbox-fill about__details-icon"></i>
+                        Regular blood donation helps maintain a stable supply for patients.
+                    </p>
+                </div>
+
+                <a href="#" class="button--link button--flex">
+                    Donate Now <i class="ri-arrow-right-up-line button__icon"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== STEPS ====================-->
+    <section class="steps section container">
+        <div class="steps__bg">
+            <h2 class="section__title-center steps__title">
+                Steps to start your <br> donation off right
+            </h2>
+
+            <div class="steps__container grid">
+                <div class="steps__card">
+                    <div class="steps__card-number">01</div>
+                    <h3 class="steps__card-title">Check eligibility</h3>
+                    <p class="steps__card-description">
+                        Aged between 18 and 65 years old, weigh at least 50 kgs, and be in good health.
+                        Some medical conditions or recent travel may also affect eligibility,
+                        so it's important to check with the donation center.
+                    </p>
+                </div>
+
+                <div class="steps__card">
+                    <div class="steps__card-number">02</div>
+                    <h3 class="steps__card-title">Donation process</h3>
+                    <p class="steps__card-description">
+                        Donate blood at a center or event after completing a brief screening process and a less than
+                        10 min blood draw.
+                    </p>
+                </div>
+
+                <div class="steps__card">
+                    <div class="steps__card-number">03</div>
+                    <h3 class="steps__card-title">Post-donation care</h3>
+                    <p class="steps__card-description">
+                        After donating blood, rest and follow any provided instructions,
+                        considering scheduling your next donation to help
+                        maintain the blood supply.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== EVENTS ====================-->
+    <section class="product section container" id="products">
+        <h2 class="section__title-center">
+            Check out our <br> upcoming events
+        </h2>
+
+        <p class="product__description">
+            Stay informed and discover opportunities to donate blood by checking out our upcoming events section,
+            where you can find information on donation drives, blood collection centers, and other ways to support
+            our mission.
+        </p>
+
+        <div class="product__container grid">
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="/imgs/product1.png" alt="" class="product__img">
+
+                <h3 class="product__title">Kigali Peace Marathon</h3>
+                <span class="product__price">21st May 2023</span>
+
+                <button class="button--flex product__button">
+                    <i class="ri-more-line"></i>
+                </button>
+            </article>
+
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="/imgs/product2.png" alt="" class="product__img">
+
+                <h3 class="product__title">RBC Donation Day</h3>
+                <span class="product__price">31st May 2023</span>
+
+                <button class="button--flex product__button">
+                    <i class="ri-more-line"></i>
+                </button>
+            </article>
+
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="/imgs/product3.png" alt="" class="product__img">
+
+                <h3 class="product__title">Intare Fundraiser</h3>
+                <span class="product__price">2nd July 2023</span>
+
+                <button class="button--flex product__button">
+                    <i class="ri-more-line"></i>
+                </button>
+            </article>
+        </div>
+    </section>
+
+    <!--==================== QUESTIONS ====================-->
+    <section class="questions section" id="faqs">
+        <h2 class="section__title-center questions__title container">
+            Some common questions <br> we're often asked
+        </h2>
+
+        <div class="questions__container container grid">
+            <div class="questions__group">
+                <div class="questions__item">
+                    <header class="questions__header">
+                        <i class="ri-add-line questions__icon"></i>
+                        <h3 class="questions__item-title">
+                            Who can donate blood?
+                        </h3>
+                    </header>
+
+                    <div class="questions__content">
+                        <p class="questions__description">
+                            In general, blood donors must meet certain eligibility criteria, which can include age,
+                            weight, and health status.
+                            Specific eligibility requirements can vary by country and donation center, so it's
+                            important to check with your local
+                            blood donation organization.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="questions__item">
+                    <header class="questions__header">
+                        <i class="ri-add-line questions__icon"></i>
+                        <h3 class="questions__item-title">
+                            How often can I donate blood?
+                        </h3>
+                    </header>
+
+                    <div class="questions__content">
+                        <p class="questions__description">
+                            The frequency of blood donation can depend on factors such as your blood type, health
+                            status, and donation history. In
+                            general, most people can donate blood every 8 weeks or up to 6 times per year.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="questions__item">
+                    <header class="questions__header">
+                        <i class="ri-add-line questions__icon"></i>
+                        <h3 class="questions__item-title">
+                            Is it safe to donate blood?
+                        </h3>
+                    </header>
+
+                    <div class="questions__content">
+                        <p class="questions__description">
+                            Yes, donating blood is generally considered safe for most people. Donation centers
+                            follow strict procedures to ensure
+                            the safety of both donors and recipients, and all blood donations are screened for
+                            infectious diseases.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="questions__group">
+                <div class="questions__item">
+                    <header class="questions__header">
+                        <i class="ri-add-line questions__icon"></i>
+                        <h3 class="questions__item-title">
+                            What happens to my blood after I donate?
+                        </h3>
+                    </header>
+
+                    <div class="questions__content">
+                        <p class="questions__description">
+                            After you donate blood, it goes through a series of tests to screen for infectious
+                            diseases and determine your blood
+                            type. Once the blood is deemed safe for transfusion, it is typically separated into its
+                            individual components (such as
+                            red blood cells, plasma, and platelets) and stored until it is needed by a patient.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="questions__item">
+                    <header class="questions__header">
+                        <i class="ri-add-line questions__icon"></i>
+                        <h3 class="questions__item-title">
+                            How to organize a blood donation in my community?
+                        </h3>
+                    </header>
+
+                    <div class="questions__content">
+                        <p class="questions__description">
+                            You can contact us to inquire about organizing a
+                            blood drive, which typically
+                            involves finding a suitable location, promoting the event, and recruiting donors.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="questions__item">
+                    <header class="questions__header">
+                        <i class="ri-add-line questions__icon"></i>
+                        <h3 class="questions__item-title">
+                            What should I do after donating blood?
+                        </h3>
+                    </header>
+
+                    <div class="questions__content">
+                        <p class="questions__description">
+                            After donating blood, you should drink plenty of fluids, avoid strenuous activity for at
+                            least 24 hours, and follow any
+                            additional instructions provided by the donation center or medical staff.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== CONTACT ====================-->
+    <section class="contact section container" id="contact">
+        <div class="contact__container grid">
+            <div class="contact__box">
+                <h2 class="section__title">
+                    Reach out to us today <br> via any of the given <br> information
+                </h2>
+
+                <div class="contact__data">
+                    <div class="contact__information">
+                        <h3 class="contact__subtitle">Call us for instant support</h3>
+                        <span class="contact__description">
+                                <i class="ri-phone-line contact__icon"></i>
+                                +999 888 777
+                            </span>
+                    </div>
+
+                    <div class="contact__information">
+                        <h3 class="contact__subtitle">Write us by mail</h3>
+                        <span class="contact__description">
+                                <i class="ri-mail-line contact__icon"></i>
+                                user@email.com
+                            </span>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" class="contact__form">
+                <div class="contact__inputs">
+                    <div class="contact__content">
+                        <input type="email" placeholder=" " class="contact__input">
+                        <label class="contact__label">Email</label>
+                    </div>
+
+                    <div class="contact__content">
+                        <input type="text" placeholder=" " class="contact__input">
+                        <label class="contact__label">Subject</label>
+                    </div>
+
+                    <div class="contact__content contact__area">
+                        <textarea name="message" placeholder=" " class="contact__input"></textarea>
+                        <label  class="contact__label">Message</label>
+                    </div>
+                </div>
+
+                <button class="button button--flex">
+                    Send Message
+                    <i class="ri-arrow-right-up-line button__icon"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<!--==================== FOOTER ====================-->
+<footer class="footer section">
+    <div class="footer__container container grid">
+        <div class="footer__content">
+            <a href="#" class="footer__logo">
+                <i class="ri-heart-pulse-line footer__logo-icon"></i>LifeBank
+            </a>
+
+            <h3 class="footer__title">
+                Subscribe to our newsletter <br> to stay update
+            </h3>
+
+            <div class="footer__subscribe">
+                <input type="email" placeholder="Enter your email" class="footer__input">
+
+                <button class="button button--flex footer__button">
+                    Subscribe
+                    <i class="ri-arrow-right-up-line button__icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Our Address</h3>
+
+            <ul class="footer__data">
+                <li class="footer__information">1234 - Rwanda</li>
+                <li class="footer__information">Gasabo - Kigali</li>
+                <li class="footer__information">123-456-789</li>
+            </ul>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Contact Us</h3>
+
+            <ul class="footer__data">
+                <li class="footer__information">+250 789 567 629</li>
+
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/" class="footer__social-link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer__social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="footer__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <p class="footer__copy">&#169; Jean Yves Nkurunziza. All rigths reserved</p>
+</footer>
+
+<!--=============== SCROLL UP ===============-->
+<a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-fill scrollup__icon"></i>
+</a>
+
+<!--=============== SCROLL REVEAL ===============-->
+<script src="/js/scrollreveal.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="/js/main.js"></script>
+</body>
+
+</html>

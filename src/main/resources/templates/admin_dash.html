@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeBank admin</title>
+  <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+  <link rel="stylesheet" href="/css/styling.css">
+</head>
+
+<body>
+<input type='checkbox' id='nav-toggle'>
+<div class="sidebar">
+  <div class="sidebar-brand">
+    <h1>
+      <a><span>LifeBank</span></a>
+      <span> </span>
+    </h1>
+  </div>
+  <div class="sidebar-menu">
+    <ul>
+      <li>
+        <a th:href="@{/admin}" class="active"><span class="las la-igloo"></span>
+          <span>Dashboard</span></a>
+      </li>
+      <li>
+        <a th:href="@{/admin/event}"><span class="las la-users"></span>
+          <span>Events</span></a>
+      </li>
+      <li>
+        <a th:href="@{/admin/users}"><span class="las la-clipboard-list"></span>
+          <span>App Users</span></a>
+      </li>
+      <li>
+        <a href=""> <span class="las la-clipboard-list"></span>
+          <span>Donations</span></a>
+      </li>
+      <li>
+        <a th:href="@{/logout}"><span class="las la-clipboard-list"></span>
+          <span>Logout</span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="main-content">
+  <header>
+    <h2>
+      <label for="nav-toggle">
+        <span class="las la-bars"></span>
+      </label>
+      Dashboard
+    </h2>
+    <div class="search-wrapper">
+      <span class="las la-search"></span>
+      <input type="search" placeholder="search here" />
+    </div>
+    <div class="user-wrapper">
+      <img src="/imgs/user.png" width="40px" height="40px" alt="">
+      <div>
+        <h4>Jean Yves</h4>
+        <small>Admin</small>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="cards">
+      <div class="card-single">
+        <div>
+          <h1>54</h1>
+          <span>Donors</span>
+        </div>
+        <div>
+          <img src="/imgs/icons8-drop-of-blood-48.png" alt=""
+               style="background-color: transparent;">
+        </div>
+      </div>
+      <div class="card-single">
+        <div>
+          <h1>79</h1>
+          <span>Doctors</span>
+        </div>
+        <div>
+          <img src="/imgs/icons8-event-accepted-50.png" alt=""
+               style="background-color: transparent;">
+        </div>
+      </div>
+      <div class="card-single">
+        <div>
+          <h1>124</h1>
+          <span>Events</span>
+        </div>
+        <div>
+          <img src="/imgs/icons8-connectivity-and-help-50.png" alt=""
+               style="background-color: transparent;">
+        </div>
+      </div>
+    </div>
+    <div class="recent-grid">
+      <div class="project">
+        <div class="card">
+          <div class="card-header">
+            <h3>Upcoming Events</h3>
+            <button>
+              See all <span class="las la-arrow-right"></span>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table width="100%">
+                <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Location</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="event:${events}">
+                  <td th:text="${event.getId()}" class="never_seen"></td>
+                  <td th:text="${event.getTitle()}"></td>
+                  <td th:text="${event.getLocation()}"></td>
+                  <td th:text="${event.getStartingDate()}"></td>
+                  <td>
+                    <a th:href="@{/admin/edit/{id}(id=${event.getId()})}">Edit</a>
+                    <a th:href="@{/admin/delete/{id}(id=${event.getId()})}">Delete</a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="customers">
+        <div class="card">
+          <div class="card-header">
+            <h3>Notifications</h3>
+            <button>
+              See all <span class="las la-arrow-right"></span>
+            </button>
+          </div>
+
+          <div class="card-body">
+            <div class="customer">
+              <div class='info'>
+                <div>
+                  <small>CEO Excerpt</small>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="customer">
+              <div class='info'>
+                <div>
+                  <small>CEO Excerpt</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+
+</html>
