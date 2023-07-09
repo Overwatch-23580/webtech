@@ -38,7 +38,6 @@ JavaScript
 HTML
 CSS
 PostgreSQL DB
-Heroku app hosting service
 
 DATABASE DESIGN
 
