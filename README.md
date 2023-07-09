@@ -11,7 +11,7 @@ When a donor attends a blood donation event, the attending doctor or medical pro
 
 Life Bank assigns a unique user account to each donor, which they can access to view their donation history. Upon logging into their account, donors can see a summary of their previous donations, including the dates and quantities of blood donated. This feature provides donors with a sense of accomplishment and allows them to keep track of their ongoing contribution to saving lives through blood donation.
 
-In addition to the donor interface, Life Bank also includes an administrative panel. The admin has the authority to create new blood donation events and manage the overall system. They can add event details, such as event name, location, date, and any specific requirements for potential donors. The admin also has the ability to add or remove doctors from the system, ensuring proper coordination between medical professionals and the blood donation events.
+In addition to the donor interface, Life Bank also includes an administrative panel. The admin has the authority to create new blood donation events and manage the overall system. They can add event details, such as event name, location, date, and any specific requirements for potential donors. The admin also has the ability to add or remove doctors from the system, ensuring proper coordination between medical professionals and blood donation events.
 
 Doctors play a crucial role in the Life Bank system as they are responsible for recording the donations made by donors. Using their assigned accounts, doctors can access the system and record the relevant information after each blood donation. This process ensures accurate data collection and maintains transparency in the system.
 
@@ -44,19 +44,6 @@ DATABASE DESIGN
 
 ![LifeBank](https://github.com/Overwatch-23580/webtech/assets/116570272/442356b7-3e34-42b7-a4cc-8715a088ce2c)
 
-
-USER REQUIREMENTS
-
-You can access the website on lifebank-rw.herokuapp.com
-
-The application has only one admin by design, to log in as admin use this credentials
-
-username : nkurunzizabreezzy@gmail.com
-Password: 123
-
-As communicated on your whatsapp, my laptop crashed and I had to submit whatever I had so this is not the final version that I had in my laptop as you’ve seen it in the presentation that I did on 14th May 2023. I attached the picture showing what happened!
-
-![WhatsApp Image 2023-05-16 at 21 17 52](https://github.com/Overwatch-23580/webtech/assets/116570272/b8d6b209-ca00-4bce-9819-9261c8d1fdee)
 
 
 
